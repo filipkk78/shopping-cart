@@ -1,0 +1,56 @@
+.mainHeader {
+  background-color: #1b1c1d;
+  color: white;
+  padding: 1em;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navBar a:hover {
+  text-decoration: underline;
+}
+
+.cartLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.searchBar input {
+  background-color: #26282b;
+  border: none;
+  border-radius: 0.4em;
+  color: white;
+  padding: 0.2em;
+  width: 600px;
+  height: 40px;
+}
+
+.searchBar input:focus {
+  outline: none;
+  box-shadow: 0px 0px 24px 3px rgb(0, 0, 0);
+}
+
+.searchBar input[type="search"]::-webkit-search-decoration,
+.searchBar input[type="search"]::-webkit-search-cancel-button,
+.searchBar input[type="search"]::-webkit-search-results-button,
+.searchBar input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
