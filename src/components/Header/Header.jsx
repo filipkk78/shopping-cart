@@ -17,13 +17,15 @@ function Header() {
           />
           <Search></Search>
         </div>
-        <h2>
-          <Link to="/shop">Products</Link>
-        </h2>
-        <h2 className={styles.cartLink}>
-          <Link to="/cart">Cart</Link>
-          <ShoppingCart></ShoppingCart>
-        </h2>
+        <div className={styles.headerLinks}>
+          <h2>
+            <Link to="/shop">Products</Link>
+          </h2>
+          <h2 className={styles.cartLink}>
+            <Link to="/cart">Cart</Link>
+            <ShoppingCart></ShoppingCart>
+          </h2>
+        </div>
       </nav>
     </header>
   );
