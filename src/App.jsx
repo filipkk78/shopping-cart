@@ -4,11 +4,14 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState({ items: [], total: 0 });
 
   function addToCart(item) {
-    setCart([...cart, item]);
-    console.log(cart);
+    setCart({
+      items: [...cart.items, { product: item, amount: 1 }],
+      total: cart.total + item.price,
+    });
+    console.log(cart.total);
   }
 
   return (

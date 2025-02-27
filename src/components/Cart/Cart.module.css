@@ -1,3 +1,29 @@
-.main {
-  padding: 2em;
+.wrapper {
+  padding: 0 12rem;
+}
+
+.cartWrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 6em;
+  margin-top: 2em;
+}
+
+.cartItems {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: 120px;
+  gap: 1em;
+}
+
+.cartTotal {
+  height: 200px;
+  background-color: #26282b;
+  color: white;
+  border-radius: 20px;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
 }

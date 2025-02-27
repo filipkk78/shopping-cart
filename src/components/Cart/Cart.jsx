@@ -1,16 +1,32 @@
 import styles from "./Cart.module.css";
 import { useOutletContext } from "react-router-dom";
+import CartItem from "../CartItem/CartItem";
 
 function Cart() {
   const context = useOutletContext();
-  const cart = context.cart;
+  const cart = context.cart.items;
+  const total = context.cart.total;
+
   return (
-    <>
-      <p>This is your shopping cart</p>
-      {cart.map((item) => (
-        <div key={item.id}>{item.title}</div>
-      ))}
-    </>
+    <section className={styles.wrapper}>
+      <h2>
+        Cart (
+        {cart.length === 0
+          ? "empty"
+          : `${cart.length} ${cart.length === 1 ? "product" : "products"}`}
+        )
+      </h2>
+      <div className={styles.cartWrapper}>
+        <div className={styles.cartItems}>
+          {cart.map((item) => (
+            <CartItem item={item} key={item.product.id}></CartItem>
+          ))}
+        </div>
+        <aside className={styles.cartTotal}>
+          <div className={styles.totalHeader}>{total}$</div>
+        </aside>
+      </div>
+    </section>
   );
 }
 
