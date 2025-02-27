@@ -7,6 +7,7 @@ import img5 from "../../img/monitor.jpg";
 import { useState, useEffect } from "react";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 const IMAGES = [img1, img2, img3, img4, img5];
 
@@ -28,7 +29,7 @@ function Home() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading></Loading>;
   if (error) return <p>A network error has occured</p>;
 
   return (

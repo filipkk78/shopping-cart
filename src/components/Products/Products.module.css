@@ -6,3 +6,11 @@
   grid-auto-rows: 1fr;
   gap: 30px;
 }
+
+.loadingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  font-size: 3em;
+}

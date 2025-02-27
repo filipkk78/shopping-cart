@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import StoreItem from "../StoreItem/StoreItem";
 import styles from "./Products.module.css";
 import PropTypes from "prop-types";
+import Loading from "../Loading/Loading";
 
 function Products({ handleAddToCart }) {
   const [products, setProducts] = useState(null);
@@ -21,7 +22,7 @@ function Products({ handleAddToCart }) {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading></Loading>;
   if (error) return <p>A network error has occured</p>;
 
   return (
