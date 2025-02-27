@@ -1,0 +1,22 @@
+.product {
+  background-color: #26282b;
+  color: white;
+  border-radius: 20px;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 24px 3px rgb(0, 0, 0);
+}
+
+.product img {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
