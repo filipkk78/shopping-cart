@@ -4,8 +4,7 @@ import styles from "./Cart.module.css";
 function Cart() {
   return (
     <>
-      <Header></Header>
-      <main className={styles.main}>Cart</main>
+      <p>This is your shopping cart</p>
     </>
   );
 }
