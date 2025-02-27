@@ -15,8 +15,7 @@ function App() {
     <>
       <Header></Header>
       <main className={styles.main}>
-        <Outlet></Outlet>
-        {/* <Products handleAddToCart={addToCart}></Products> */}
+        <Outlet context={{ cart, addToCart }}></Outlet>
       </main>
       <footer>filipkk78</footer>
     </>

@@ -19,4 +19,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 0.5em;
+}
+
+.product button {
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
 }

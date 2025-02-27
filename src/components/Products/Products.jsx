@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import StoreItem from "../StoreItem/StoreItem";
 import styles from "./Products.module.css";
+import PropTypes from "prop-types";
 
-function Products() {
+function Products({ handleAddToCart }) {
   const [products, setProducts] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -15,7 +16,7 @@ function Products() {
         }
         return response.json();
       })
-      .then((json) => setProducts(json.slice(0, -7)))
+      .then((json) => setProducts(json))
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, []);
@@ -26,10 +27,18 @@ function Products() {
   return (
     <section className={styles.products}>
       {products.map((product) => (
-        <StoreItem key={product.id} product={product}></StoreItem>
+        <StoreItem
+          key={product.id}
+          product={product}
+          handleAddToCart={handleAddToCart}
+        ></StoreItem>
       ))}
     </section>
   );
 }
+
+Products.propTypes = {
+  handleAddToCart: PropTypes.func,
+};
 
 export default Products;
