@@ -6,6 +6,7 @@ import img4 from "../../img/hdd.jpg";
 import img5 from "../../img/monitor.jpg";
 import { useState, useEffect } from "react";
 import styles from "./Home.module.css";
+import { Link } from "react-router-dom";
 
 const IMAGES = [img1, img2, img3, img4, img5];
 
@@ -34,7 +35,10 @@ function Home() {
     <>
       <Slider imageUrls={IMAGES}></Slider>
       <h2>Welcome to our store!</h2>
-      <p>Below you can see a selection of the categories we offer.</p>
+      <p className={styles.desc}>
+        Below you can see a selection of the categories we offer. Click{" "}
+        <Link to="/shop">here</Link> to view all of the products
+      </p>
       <div className={styles.categories}>
         {categories.slice(0, 5).map((category) => (
           <div className={styles.category} key={category.id}>

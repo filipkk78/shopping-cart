@@ -22,3 +22,7 @@
   grid-auto-rows: 1fr;
   gap: 30px;
 }
+
+.desc a {
+  color: white;
+}
