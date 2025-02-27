@@ -1,6 +1,7 @@
 import styles from "./App.module.css";
 import Header from "./components/Header/Header";
 import Slider from "./components/Slider/Slider";
+import Products from "./components/Products/Products";
 
 import img1 from "./img/clothes.jpg";
 import img2 from "./img/controller.jpg";
@@ -16,8 +17,9 @@ function App() {
       <Header></Header>
       <main className={styles.main}>
         <Slider imageUrls={IMAGES}></Slider>
-        <p>This is not a real store, you can't buy stuff here.</p>
+        <Products></Products>
       </main>
+      <footer>filipkk78</footer>
     </>
   );
 }

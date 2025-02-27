@@ -1,3 +1,16 @@
 .main {
   padding: 2em;
+  color: white;
+  background-color: #2e2f30;
+}
+
+footer {
+  background-color: #1b1c1d;
+  color: white;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 700;
 }
