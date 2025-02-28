@@ -7,10 +7,26 @@ function App() {
   const [cart, setCart] = useState({ items: [], total: 0 });
 
   function addToCart(item) {
-    setCart({
-      items: [...cart.items, { product: item, amount: 1 }],
-      total: cart.total + item.price,
-    });
+    const nextCartItems = [...cart.items];
+    const amountCheck = nextCartItems.find(
+      (prod) => prod.product.title === item.title
+    );
+    if (amountCheck !== undefined) {
+      amountCheck.amount += 1;
+      let nextTotal = 0;
+      nextCartItems.forEach(
+        (prod) => (nextTotal += prod.product.price * prod.amount)
+      );
+      setCart({
+        items: nextCartItems,
+        total: nextTotal,
+      });
+    } else {
+      setCart({
+        items: [...cart.items, { product: item, amount: 1 }],
+        total: cart.total + item.price,
+      });
+    }
   }
 
   function handleChangeAmount(e) {
