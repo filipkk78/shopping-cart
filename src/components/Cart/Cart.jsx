@@ -19,7 +19,11 @@ function Cart() {
       <div className={styles.cartWrapper}>
         <div className={styles.cartItems}>
           {cart.map((item) => (
-            <CartItem item={item} key={item.product.id}></CartItem>
+            <CartItem
+              item={item}
+              handleChangeAmount={context.handleChangeAmount}
+              key={item.product.id}
+            ></CartItem>
           ))}
         </div>
         <aside className={styles.cartTotal}>
