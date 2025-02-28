@@ -27,4 +27,9 @@
   border-radius: 10px;
   background-color: transparent;
   color: white;
+  transition: scale 100ms ease-in;
+}
+
+.product button:active {
+  scale: 1.1;
 }
