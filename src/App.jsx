@@ -96,6 +96,10 @@ function App() {
     });
   }
 
+  function clearCart() {
+    setCart({ items: [], total: 0 });
+  }
+
   return (
     <>
       <Header></Header>
@@ -109,6 +113,7 @@ function App() {
             decrementAmount,
             incrementAmount,
             removeItem,
+            clearCart,
           }}
         ></Outlet>
       </main>

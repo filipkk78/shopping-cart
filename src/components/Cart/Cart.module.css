@@ -57,3 +57,30 @@
 .reserved {
   font-size: 0.9em;
 }
+
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+.cartInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7em;
+}
+
+.clearCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.clearCart svg {
+  stroke: white;
+}

@@ -2,6 +2,7 @@ import styles from "./Cart.module.css";
 import { useOutletContext } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import { ChevronRight } from "lucide-react";
+import { Trash2 } from "lucide-react";
 
 function Cart() {
   const context = useOutletContext();
@@ -10,13 +11,22 @@ function Cart() {
 
   return (
     <section className={styles.wrapper}>
-      <h2>
-        Cart (
-        {cart.length === 0
-          ? "empty"
-          : `${cart.length} ${cart.length === 1 ? "product" : "products"}`}
-        )
-      </h2>
+      <div className={styles.cartHeader}>
+        <div className={styles.cartInfo}>
+          <h2>Cart</h2>
+          <p>
+            (
+            {cart.length === 0
+              ? "empty"
+              : `${cart.length} ${cart.length === 1 ? "product" : "products"}`}
+            )
+          </p>
+        </div>
+        <button className={styles.clearCart} onClick={context.clearCart}>
+          <Trash2></Trash2>
+          Clear cart
+        </button>
+      </div>
       <div className={styles.cartWrapper}>
         <div className={styles.cartItems}>
           {cart.map((item) => (
