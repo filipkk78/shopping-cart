@@ -22,6 +22,8 @@ function Cart() {
             <CartItem
               item={item}
               handleChangeAmount={context.handleChangeAmount}
+              decrementAmount={context.decrementAmount}
+              incrementAmount={context.incrementAmount}
               key={item.product.id}
             ></CartItem>
           ))}

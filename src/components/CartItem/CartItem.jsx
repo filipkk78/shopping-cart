@@ -1,8 +1,13 @@
-import { Trash2 } from "lucide-react";
+import { Trash2, Plus, Minus } from "lucide-react";
 import styles from "./CartItem.module.css";
 import PropTypes from "prop-types";
 
-function CartItem({ item, handleChangeAmount }) {
+function CartItem({
+  item,
+  handleChangeAmount,
+  incrementAmount,
+  decrementAmount,
+}) {
   return (
     <div className={styles.cartItem}>
       <div className={styles.cartItemLeft}>
@@ -11,12 +16,14 @@ function CartItem({ item, handleChangeAmount }) {
       </div>
       <div className={styles.cartItemRight}>
         <p>{item.product.price}$</p>
+        <Minus onClick={() => decrementAmount(item)}></Minus>
         <input
           type="number"
           onChange={handleChangeAmount}
-          defaultValue={item.amount}
+          value={item.amount}
           name={item.product.title}
         />
+        <Plus onClick={() => incrementAmount(item)}></Plus>
         <Trash2></Trash2>
       </div>
     </div>
@@ -26,6 +33,8 @@ function CartItem({ item, handleChangeAmount }) {
 CartItem.propTypes = {
   item: PropTypes.object,
   handleChangeAmount: PropTypes.func,
+  incrementAmount: PropTypes.func,
+  decrementAmount: PropTypes.func,
 };
 
 export default CartItem;

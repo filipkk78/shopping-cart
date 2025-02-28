@@ -46,12 +46,54 @@ function App() {
     });
   }
 
+  function incrementAmount(item) {
+    const nextCartItems = [...cart.items];
+    const desiredItem = nextCartItems.find(
+      (prod) => prod.product.title === item.product.title
+    );
+    desiredItem.amount = desiredItem.amount + 1;
+    let nextTotal = 0;
+    nextCartItems.forEach(
+      (prod) => (nextTotal += prod.product.price * prod.amount)
+    );
+    setCart({
+      items: nextCartItems,
+      total: nextTotal,
+    });
+  }
+
+  function decrementAmount(item) {
+    const nextCartItems = [...cart.items];
+    const desiredItem = nextCartItems.find(
+      (prod) => prod.product.title === item.product.title
+    );
+    if (desiredItem.amount === 1) {
+      return;
+    }
+    desiredItem.amount = desiredItem.amount - 1;
+    let nextTotal = 0;
+    nextCartItems.forEach(
+      (prod) => (nextTotal += prod.product.price * prod.amount)
+    );
+    setCart({
+      items: nextCartItems,
+      total: nextTotal,
+    });
+  }
+
   return (
     <>
       <Header></Header>
       <main className={styles.main}>
         <Outlet
-          context={{ cart, setCart, addToCart, handleChangeAmount }}
+          context={{
+            cart,
+            setCart,
+            addToCart,
+            handleChangeAmount,
+            decrementAmount,
+            incrementAmount,
+          }}
         ></Outlet>
       </main>
       <footer>filipkk78</footer>
