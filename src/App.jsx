@@ -62,12 +62,27 @@ function App() {
     });
   }
 
+  function removeItem(item) {
+    const nextItems = cart.items.filter(
+      (prod) => prod.product.title !== item.product.title
+    );
+    let nextTotal = 0;
+    nextItems.forEach(
+      (prod) => (nextTotal += prod.product.price * prod.amount)
+    );
+    setCart({
+      items: nextItems,
+      total: nextTotal,
+    });
+  }
+
   function decrementAmount(item) {
     const nextCartItems = [...cart.items];
     const desiredItem = nextCartItems.find(
       (prod) => prod.product.title === item.product.title
     );
     if (desiredItem.amount === 1) {
+      removeItem(item);
       return;
     }
     desiredItem.amount = desiredItem.amount - 1;
@@ -93,6 +108,7 @@ function App() {
             handleChangeAmount,
             decrementAmount,
             incrementAmount,
+            removeItem,
           }}
         ></Outlet>
       </main>

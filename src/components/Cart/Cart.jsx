@@ -24,6 +24,7 @@ function Cart() {
               handleChangeAmount={context.handleChangeAmount}
               decrementAmount={context.decrementAmount}
               incrementAmount={context.incrementAmount}
+              removeItem={context.removeItem}
               key={item.product.id}
             ></CartItem>
           ))}

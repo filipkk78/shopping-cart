@@ -7,6 +7,7 @@ function CartItem({
   handleChangeAmount,
   incrementAmount,
   decrementAmount,
+  removeItem,
 }) {
   return (
     <div className={styles.cartItem}>
@@ -24,7 +25,7 @@ function CartItem({
           name={item.product.title}
         />
         <Plus onClick={() => incrementAmount(item)}></Plus>
-        <Trash2></Trash2>
+        <Trash2 onClick={() => removeItem(item)}></Trash2>
       </div>
     </div>
   );
@@ -35,6 +36,7 @@ CartItem.propTypes = {
   handleChangeAmount: PropTypes.func,
   incrementAmount: PropTypes.func,
   decrementAmount: PropTypes.func,
+  removeItem: PropTypes.func,
 };
 
 export default CartItem;
