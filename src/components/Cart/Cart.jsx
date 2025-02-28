@@ -2,13 +2,26 @@ import styles from "./Cart.module.css";
 import { useOutletContext } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import { ChevronRight } from "lucide-react";
-import { Trash2 } from "lucide-react";
+import { Trash2, ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const context = useOutletContext();
   const cart = context.cart.items;
   const total = context.cart.total;
 
+  if (cart.length === 0) {
+    return (
+      <section className={styles.emptyCartWrapper}>
+        <ShoppingCart></ShoppingCart>
+        <h2>Your cart is empty</h2>
+        <div className={styles.navButtons}>
+          <Link to="/">Visit our homepage</Link>
+          <Link to="/shop">View our products</Link>
+        </div>
+      </section>
+    );
+  }
   return (
     <section className={styles.wrapper}>
       <div className={styles.cartHeader}>

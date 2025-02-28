@@ -84,3 +84,36 @@
 .clearCart svg {
   stroke: white;
 }
+
+.emptyCartWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.emptyCartWrapper svg {
+  width: 5em;
+  height: 5em;
+}
+
+.emptyCartWrapper .navButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.emptyCartWrapper .navButtons a {
+  color: white;
+  text-decoration: none;
+  background-color: #26282b;
+  padding: 1em;
+  border-radius: 20px;
+}
+
+.emptyCartWrapper .navButtons a:hover {
+  text-decoration: underline;
+}
