@@ -14,13 +14,12 @@ function App() {
   }
 
   function handleChangeAmount(e) {
-    if (e.target.value === "") return;
+    if (e.target.value === "" || e.target.value < 1) return;
     const nextCartItems = [...cart.items];
     const item = nextCartItems.find(
       (prod) => prod.product.title === e.target.name
     );
-    console.log(item);
-    item.amount = e.target.value;
+    item.amount = parseInt(e.target.value);
     let nextTotal = 0;
     nextCartItems.forEach(
       (prod) => (nextTotal += prod.product.price * prod.amount)
