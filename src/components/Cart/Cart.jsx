@@ -1,6 +1,7 @@
 import styles from "./Cart.module.css";
 import { useOutletContext } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
+import { ChevronRight } from "lucide-react";
 
 function Cart() {
   const context = useOutletContext();
@@ -30,7 +31,19 @@ function Cart() {
           ))}
         </div>
         <aside className={styles.cartTotal}>
-          <div className={styles.totalHeader}>{total}$</div>
+          <div className={styles.totalHeader}>
+            <p>Total:</p>
+            <p>{total}.00$</p>
+          </div>
+          <button className={styles.checkoutBtn}>
+            Proceed to checkout <ChevronRight></ChevronRight>
+          </button>
+          <button className={styles.leasingBtn}>
+            Calculate installments or leasing
+          </button>
+          <p className={styles.reserved}>
+            Please remember that items added to cart aren't reserved
+          </p>
         </aside>
       </div>
     </section>

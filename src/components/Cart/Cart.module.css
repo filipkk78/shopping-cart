@@ -23,7 +23,35 @@
   border-radius: 20px;
   padding: 1em;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
+  gap: 0.5em;
+}
+
+.totalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.cartTotal button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 2em;
+  transition: scale 300ms ease-in-out;
+}
+
+.cartTotal button:hover {
+  scale: 1.02;
+}
+
+.reserved {
+  font-size: 0.9em;
 }

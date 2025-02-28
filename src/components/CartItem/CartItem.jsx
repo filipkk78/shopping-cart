@@ -17,15 +17,21 @@ function CartItem({
       </div>
       <div className={styles.cartItemRight}>
         <p>{item.product.price}$</p>
-        <Minus onClick={() => decrementAmount(item)}></Minus>
+        <button>
+          <Minus onClick={() => decrementAmount(item)}></Minus>
+        </button>
         <input
           type="number"
           onChange={handleChangeAmount}
           value={item.amount}
           name={item.product.title}
         />
-        <Plus onClick={() => incrementAmount(item)}></Plus>
-        <Trash2 onClick={() => removeItem(item)}></Trash2>
+        <button>
+          <Plus onClick={() => incrementAmount(item)}></Plus>
+        </button>
+        <button>
+          <Trash2 onClick={() => removeItem(item)}></Trash2>
+        </button>
       </div>
     </div>
   );
