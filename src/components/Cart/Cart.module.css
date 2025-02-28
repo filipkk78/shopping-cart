@@ -117,3 +117,31 @@
 .emptyCartWrapper .navButtons a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 1550px) {
+  .wrapper {
+    padding: 0 6rem;
+  }
+}
+
+@media (max-width: 1360px) {
+  .wrapper {
+    padding: 0 3rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .cartWrapper {
+    grid-template-columns: 1fr;
+  }
+  .cartHeader {
+    width: 100%;
+  }
+}

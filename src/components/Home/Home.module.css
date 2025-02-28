@@ -21,8 +21,16 @@
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: 1fr;
   gap: 30px;
+  justify-content: center;
 }
 
 .desc a {
   color: white;
+}
+
+@media (max-width: 1000px) {
+  .categories {
+    grid-template-columns: 50%;
+    grid-template-rows: repeat(5, 1fr);
+  }
 }

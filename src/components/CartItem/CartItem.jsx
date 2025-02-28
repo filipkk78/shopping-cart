@@ -13,7 +13,7 @@ function CartItem({
     <div className={styles.cartItem}>
       <div className={styles.cartItemLeft}>
         <img src={item.product.images[0]} />
-        <p>{item.product.title}</p>
+        <p className={styles.cartItemTitle}>{item.product.title}</p>
       </div>
       <div className={styles.cartItemRight}>
         <p>{item.product.price}$</p>
