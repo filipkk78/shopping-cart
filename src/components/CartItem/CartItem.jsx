@@ -15,8 +15,8 @@ function CartItem({
         <img src={item.product.images[0]} />
         <p className={styles.cartItemTitle}>{item.product.title}</p>
       </div>
+      <p>Price: {item.product.price}$</p>
       <div className={styles.cartItemRight}>
-        <p>{item.product.price}$</p>
         <button>
           <Minus onClick={() => decrementAmount(item)}></Minus>
         </button>

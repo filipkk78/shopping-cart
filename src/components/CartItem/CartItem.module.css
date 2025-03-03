@@ -54,15 +54,12 @@ input[type="number"] {
 
 .cartItem button svg {
   stroke: white;
+  width: 2rem;
 }
 
 .cartItem button {
   border: none;
   background-color: transparent;
-}
-
-.cartItemRight button {
-  flex-shrink: 1;
 }
 
 .cartItemTitle {
@@ -74,6 +71,7 @@ input[type="number"] {
   .cartItem {
     flex-direction: column;
     padding: 1.5em;
+    gap: 0.5em;
   }
   .cartItemLeft {
     height: 50%;
