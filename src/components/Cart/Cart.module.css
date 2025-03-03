@@ -48,6 +48,7 @@
   width: 100%;
   height: 2em;
   transition: scale 300ms ease-in-out;
+  font-size: 0.8rem;
 }
 
 .cartTotal button:hover {
@@ -55,7 +56,7 @@
 }
 
 .reserved {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 .cartHeader {
@@ -143,5 +144,11 @@
   }
   .cartHeader {
     width: 100%;
+  }
+}
+
+@media (max-width: 630px) {
+  .cartItems {
+    grid-auto-rows: 240px;
   }
 }

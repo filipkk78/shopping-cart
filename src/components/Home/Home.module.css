@@ -30,7 +30,7 @@
 
 @media (max-width: 1000px) {
   .categories {
-    grid-template-columns: 50%;
+    grid-template-columns: 80%;
     grid-template-rows: repeat(5, 1fr);
   }
 }

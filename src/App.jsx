@@ -101,7 +101,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <Header></Header>
       <main className={styles.main}>
         <Outlet
@@ -118,7 +118,7 @@ function App() {
         ></Outlet>
       </main>
       <footer>filipkk78</footer>
-    </>
+    </div>
   );
 }
 

@@ -38,6 +38,7 @@ h6 {
   isolation: isolate;
 }
 
-* {
+body {
   font-family: Roboto;
+  font-size: 16px;
 }

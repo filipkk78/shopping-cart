@@ -2,14 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
-  font-size: 3em;
 }
 
 .circle {
   stroke: white;
-  width: 10%;
-  height: 10%;
+  width: 5rem;
+  height: 5rem;
   animation: spin infinite linear 2500ms;
 }
 

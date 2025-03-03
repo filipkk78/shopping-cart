@@ -1,8 +1,14 @@
+.wrapper {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .main {
   padding: 2em 6em 2em 6em;
   color: white;
   background-color: #2e2f30;
-  min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,12 +18,13 @@
 footer {
   background-color: #1b1c1d;
   color: white;
-  height: 60px;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 700;
+  margin-top: auto;
 }
 
 @media (max-width: 800px) {
