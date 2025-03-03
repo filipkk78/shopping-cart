@@ -62,7 +62,7 @@ input[type="number"] {
 }
 
 .cartItemRight button {
-  flex-shrink: 0;
+  flex-shrink: 1;
 }
 
 .cartItemTitle {
@@ -73,7 +73,7 @@ input[type="number"] {
 @media (max-width: 630px) {
   .cartItem {
     flex-direction: column;
-    padding: 2em;
+    padding: 1.5em;
   }
   .cartItemLeft {
     height: 50%;
